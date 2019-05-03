@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-post-list-item',
@@ -7,20 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostListItemComponent implements OnInit {
 
-  vote: number;
+  @Input() postTitle: string;
+  @Input() postDate: Date;
+  @Input() postText: string;
+  @Input() postVotes: number;
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+
+  getColor() {
+    if (this.postVotes > 0) {
+      return 'green';
+    } else if (this.postVotes < 0) {
+      return 'red';
+    } else {
+      return 'white';
+    }
   }
-
-
   Upvote(){
-    this.vote += 1;
+    this.postVotes += 1;
   }
 
   Downvote(){
-    this.vote -= 1;
+    this.postVotes -= 1;
   }
-
 }

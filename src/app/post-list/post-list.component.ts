@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Post } from '../Post';
 
 @Component({
@@ -8,11 +8,10 @@ import { Post } from '../Post';
 })
 export class PostListComponent implements OnInit {
 
-  posts: Array<Post>;
+  @Input() posts: Array<Post>;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

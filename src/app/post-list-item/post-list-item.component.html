@@ -1,6 +1,6 @@
-<div>
+<div [ngStyle]="{backgroundColor:getColor()}">
   <h1>{{postTitle}}</h1>
-  <span>{{postDate}}</span>
+  <span>{{postDate | date}}</span>
   <p>{{postText}}</p>
   <button (click)="Upvote()">J'aime</button>
   <button (click)="Downvote()">Je n'aime pas</button>
