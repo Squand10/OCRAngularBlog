@@ -1,7 +1,8 @@
-<div [ngStyle]="{backgroundColor:getColor()}">
-  <h1>{{postTitle}}</h1>
-  <span>{{postDate | date}}</span>
-  <p>{{postText}}</p>
-  <button (click)="Upvote()">J'aime</button>
-  <button (click)="Downvote()">Je n'aime pas</button>
+<div class="jumbotron" [ngStyle]="{backgroundColor:getColor()}">
+  <h1 class="display-6">{{post.title}}</h1>
+  <span>{{post.date | date}}</span>
+  <p class="lead">{{post.text}}</p>
+  <button type="button" class="btn btn-success" (click)="Upvote()">J'aime</button>
+  <button type="button" class="btn btn-danger" (click)="Downvote()">Je n'aime pas</button>
+  <span>{{statut}}</span>
 </div>

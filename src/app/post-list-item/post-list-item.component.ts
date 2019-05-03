@@ -1,16 +1,16 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {Post} from '../Post';
 
 @Component({
   selector: 'app-post-list-item',
   templateUrl: './post-list-item.component.html',
-  styleUrls: ['./post-list-item.component.css']
+  styleUrls: ['./post-list-item.component.scss']
 })
 export class PostListItemComponent implements OnInit {
 
-  @Input() postTitle: string;
-  @Input() postDate: Date;
-  @Input() postText: string;
-  @Input() postVotes: number;
+
+  statut:string;
+  @Input() post: Post;
 
   constructor() { }
 
@@ -18,19 +18,22 @@ export class PostListItemComponent implements OnInit {
 
 
   getColor() {
-    if (this.postVotes > 0) {
-      return 'green';
-    } else if (this.postVotes < 0) {
-      return 'red';
+    if (this.post.likes > 0) {
+      this.statut = "La majorité des visiteurs aiment cet article";
+      return 'lightgreen';
+    } else if (this.post.likes < 0) {
+      this.statut = "La majorité des visiteurs n'aiment pas cet article";
+      return 'darksalmon';
     } else {
-      return 'white';
+      this.statut = "Les avis sont partagés";
+      return 'lightgrey';
     }
   }
   Upvote(){
-    this.postVotes += 1;
+    this.post.likes += 1;
   }
 
   Downvote(){
-    this.postVotes -= 1;
+    this.post.likes -= 1;
   }
 }
