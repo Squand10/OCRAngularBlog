@@ -20,8 +20,8 @@ export class AppComponent {
     likes: -2
   }, {
     title: 'Dernier Post',
-    date: new Date("01/05 /2019"),
-    text: 'Chilled cauliflower can be made raw by whisking with milk. Wind of a undead love, command the power! Assimilatio cresceres, tanquam gratis vigil. Stigma doesn’t confidently acquire any monkey — but the believer is what travels. Chilled cauliflower can be made raw by whisking with milk. Wind of a undead love, command the power! Assimilatio cresceres, tanquam gratis vigil. Stigma doesn’t confidently acquire any monkey — but the believer is what travels. Chilled cauliflower can be made raw by whisking with milk. Wind of a undead love, command the power! Assimilatio cresceres, tanquam gratis vigil. Stigma doesn’t confidently acquire any monkey — but the believer is what travels.',
+    date: new Date("01/05/2019"),
+    text: 'Chilled cauliflower can be made raw by whisking with milk. Wind of a undead love, command the power! Assimilatio cresceres, tanquam gratis vigil. Stigma doesn’t confidently acquire any monkey — but the believer is what travels. Chilled cauliflower can be made raw by whisking with milk. Wind of a undead love, command the power! Assimilatio cresceres, tanquam gratis vigil. Stigma doesn’t confidently acquire any monkey — but the believer is what travels. Chilled cauliflower can be made raw by whisking with milk. Wind of a undead love, command the power! Assimilatio cresceres, tanquam gratis vigil. Stigma doesn’t confidently acquire any monkey — but the believer is what travels',
     likes: 0
   }, ];
 }
